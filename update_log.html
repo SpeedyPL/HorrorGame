@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Log</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000000, #660000);
+            height: 100vh; /* Ustawiamy wysokość na 100% wysokości ekranu */
+            resize: none; /* Blokowanie zmiany rozmiaru okna przeglądarki */
+        }
+        
+        header {
+            color: #ff0000;
+            font-size: 1.5rem;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: rgba(51, 51, 51, 0.484); /* Dodajemy przezroczystość do koloru tła */
+            padding: 0px;
+            font-family: 'Creepster', cursive;
+        }
+        
+        .goToPageButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            z-index: 9999;
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        .container {
+            height: 75vh; /* Ustawiamy wysokość na 70% wysokości ekranu */
+            width: 30%; /* Ustawiamy szerokość na 40% szerokości ekranu */
+            position: absolute;
+            bottom: 10px;
+            left: 0.3%;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f0f0f0; /* Dodajemy kolor tła dla kontenera */
+        }
+        
+        .container2 {
+            height: 75vh; /* Ustawiamy wysokość na 70% wysokości ekranu */
+            width: 60%; /* Ustawiamy szerokość na 40% szerokości ekranu */
+            position: absolute;
+            bottom: 10px;
+            right: 1%;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #f0f0f0; /* Dodajemy kolor tła dla kontenera */
+        }
+        
+        .content {
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        
+        #customButton2,
+        #customButton1 {
+            display: block;
+            margin-bottom: 10px; /* Odstęp między przyciskami */
+            width: 100%; /* Pełna szerokość przycisku */
+        }
+        
+        #container2Header {
+            text-align: center; /* Wyśrodkowanie tekstu w nagłówku */
+        }
+        
+        #container2Content {
+            text-align: left; /* Ustawienie tekstu w treści na lewo */
+            overflow-y: auto; /* Włączenie pionowego przewijania */
+        }
+        
+        .text-left{
+            text-align: left;
+        }
+        
+        @media screen and (max-width: 768px) {
+            header {
+                font-size: 16px; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+            .goToPageButton{
+                font-size: 0.6rem;
+            }
+            .container{
+                width: 22%;
+                left: 1%;
+            }
+            .container2{
+                width: 50%;
+            }
+            #customButton1, #customButton2{
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UPDATE LOG</h1>
+        <!-- Przycisk do przekierowania na inną stronę -->
+        <button class="goToPageButton" onclick="window.location.href='https://speedypl.github.io/HorrorGame/'">Go back</button>
+    </header>
+    <div class="container">
+        <div class="content">
+            <button id="customButton2">18.03.2024</button>
+            <button id="customButton1">17.03.2024</button>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content">
+            <h1 id="container2Header">18.03.2024</h1>
+            <h2 class="text-left" id="container2Subheader">Added:</h2>
+            <div class="text-left" id="container2Content">
+                <p>- Settings button</p>
+                <p>- Settings menu</p>
+                <p>- Sensitivity customization</p>
+                <p>- Build version in game (top right corner)</p>
+                <p>- Option to turn on/off Build version in game</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Funkcja obsługująca kliknięcie przycisku 1
+        document.getElementById("customButton2").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+                <p>- Settings button</p>
+                <p>- Settings menu</p>
+                <p>- Sensitivity customization</p>
+                <p>- Build version in game (top right corner)</p>
+                <p>- Option to turn on/off Build version in game</p>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "18.03.2024";
+            document.getElementById("container2Subheader").innerText = "Added:";
+        });
+
+        // Funkcja obsługująca kliknięcie przycisku 2
+        document.getElementById("customButton1").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = "<p></p>";
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "That's where it all started :)";
+            document.getElementById("container2Subheader").innerText = "";
+        });
+    </script>
+</body>
+</html>
