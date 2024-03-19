@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Log</title>
@@ -92,10 +94,10 @@
         
         @media screen and (max-width: 768px) {
             header {
-                font-size: 16px; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 0.8rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
             }
             .goToPageButton{
-                font-size: 0.6rem;
+                font-size: 0.45rem;
             }
             .container{
                 width: 22%;
@@ -103,6 +105,7 @@
             }
             .container2{
                 width: 50%;
+                font-size: 0.8rem;
             }
             #customButton1, #customButton2{
                 font-size: 0.75rem;
@@ -118,13 +121,13 @@
     </header>
     <div class="container">
         <div class="content">
-            <button id="customButton2">18.03.2024</button>
+            <button id="customButton2">19.03.2024</button>
             <button id="customButton1">17.03.2024</button>
         </div>
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">18.03.2024</h1>
+            <h1 id="container2Header">19.03.2024</h1>
             <h2 class="text-left" id="container2Subheader">Added:</h2>
             <div class="text-left" id="container2Content">
                 <p>- Settings button</p>
@@ -132,6 +135,10 @@
                 <p>- Sensitivity customization</p>
                 <p>- Build version in game (top right corner)</p>
                 <p>- Option to turn on/off Build version in game</p>
+                <p>- Option to turn on/off shadows</p>
+                <p>- Cabinet, at the moment you can only open and close it</p>
+                <p>- Hammer</p>
+                <p>- Pick up and drop option (will be updated in the next update)</p>
             </div>
         </div>
     </div>
@@ -145,9 +152,14 @@
                 <p>- Sensitivity customization</p>
                 <p>- Build version in game (top right corner)</p>
                 <p>- Option to turn on/off Build version in game</p>
+                <p>- Option to turn on/off shadows</p>
+                <p>- Cabinet, at the moment you can only open and close it</p>
+                <p>- Hammer</p>
+                <p>- Pick up and drop option (will be updated in the next update)</p>
+
             `;
             // Aktualizacja nagłówków
-            document.getElementById("container2Header").innerText = "18.03.2024";
+            document.getElementById("container2Header").innerText = "19.03.2024";
             document.getElementById("container2Subheader").innerText = "Added:";
         });
 
