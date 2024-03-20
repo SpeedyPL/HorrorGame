@@ -71,7 +71,7 @@
             background-color: #f0f0f0;
             text-align: center;
         }
-        
+        #customButton3,
         #customButton2,
         #customButton1 {
             display: block;
@@ -107,8 +107,8 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2{
-                font-size: 0.75rem;
+            #customButton1, #customButton2,#customButton3{
+                font-size: 0.5rem;
             }
         }
     </style>
@@ -121,29 +121,60 @@
     </header>
     <div class="container">
         <div class="content">
-            <button id="customButton2">19.03.2024</button>
-            <button id="customButton1">17.03.2024</button>
+            <button id="customButton3">20.03.2024 (0.0.2.1)</button>
+            <button id="customButton2">19.03.2024 (0.0.2)</button>
+            <button id="customButton1">17.03.2024 (0.0.1)</button>
         </div>
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">19.03.2024</h1>
-            <h2 class="text-left" id="container2Subheader">Added:</h2>
+            <h1 id="container2Header">20.03.2024 v.0.0.2.1 (Bug fixing build)</h1>
+            <h3 class="text-left">Hello. Yesterday's build was veeeeery buggy, so I decided to make this Bug Fixing build. Besides fixing bugs I also added and improved some things. You can read about it below</h3>
+            <h2 class="text-left" id="container2Subheader">Fixed:</h2>
             <div class="text-left" id="container2Content">
-                <p>- Settings button</p>
-                <p>- Settings menu</p>
-                <p>- Sensitivity customization</p>
-                <p>- Build version in game (top right corner)</p>
-                <p>- Option to turn on/off Build version in game</p>
-                <p>- Option to turn on/off shadows</p>
-                <p>- Cabinet, at the moment you can only open and close it</p>
-                <p>- Hammer</p>
-                <p>- Pick up and drop option (will be updated in the next update)</p>
+                <p>- Buttons on some mobile devices were scaling really bad. I fixed it</p>
+                <p>- When the player picked up an object (in our case, a hammer) and then crouched while holding the object, the Y size of the object decreased twice. I fixed this bug</p>
+                <p>- When the player picked up the object (hammer) and then looked down, he flew away on the hammer (seriously XDD)(picture at the bottom of the page). Of course I fixed this bug </p>
+                <p>- Pick up button was visible while player was looking at any object. I fixed this bug</p>
+                <p>- When the player used the drop button, the item was able to fell off the map. I fixed this bug</p>
+                <h2>Added:</h2>
+                <p>- Second hammer to test pickup/drop system</p>
+                <p>- Light Bulb</p>
+                <h2>Improvements:</h2>
+                <p>- Changed pickup/drop system. Now when player picks up an item, it appears at player's right hand. While crouching, item doesn't changes it's size. Now while player drops item, it gets dropped in front of the player (in version 0.0.2 it was simply dropped under the player). Also when player wants to pick up another item (while already holding other item), player drops item which he has in his hand and picks up item. </p>
+                <p>- Now we have 1 room in the game! It doesn't has any furniture etc. inside (besides light bulb), but I'll decorate it in the future builds!</p>
+                <p>- Changed door opening/closing animation (just a bit)</p>
+                <h2>Flying on hammer:</h2>
+                <img id="hammerImage" src="https://github.com/SpeedyPL/Images_Testing/blob/main/hammer_fly_bug.png?raw=true" alt="Flying on hammer" style="width: 70%; height: 40%;" onclick="toggleImageSize()">
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.2.1
+        document.getElementById("customButton3").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <p>- Buttons on some mobile devices were scaling really bad. I fixed it</p>
+                <p>- When the player picked up an object (in our case, a hammer) and then crouched while holding the object, the Y size of the object decreased twice. I fixed this bug</p>
+                <p>- When the player picked up the object (hammer) and then looked down, he flew away on the hammer (seriously XDD)(picture at the bottom of the page). Of course I fixed this bug </p>
+                <p>- Pick up button was visible while player was looking at any object. I fixed this bug</p>
+                <p>- When the player used the drop button, the item was able to fell off the map. I fixed this bug</p>
+                <h2>Added:</h2>
+                <p>- Second hammer to test pickup/drop system</p>
+                <p>- Light Bulb</p>
+                <h2>Improvements:</h2>
+                <p>- Changed pickup/drop system. Now when player picks up an item, it appears at player's right hand. While crouching, item doesn't changes it's size. Now while player drops item, it gets dropped in front of the player (in version 0.0.2 it was simply dropped under the player). Also when player wants to pick up another item (while already holding other item), player drops item which he has in his hand and picks up item. </p>
+                <p>- Now we have 1 room in the game! It doesn't has any furniture etc. inside (besides light bulb), but I'll decorate it in the future builds!</p>
+                <p>- Changed door opening/closing animation (just a bit)</p>
+                <h2>Flying on hammer:</h2>
+                <img id="hammerImage" src="https://github.com/SpeedyPL/Images_Testing/blob/main/hammer_fly_bug.png?raw=true" alt="Flying on hammer" style="width: 70%; height: 40%;" onclick="toggleImageSize()">
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "20.03.2024 v.0.0.2.1 (Bug fixing build)";
+            document.getElementById("container2Subheader").innerText = "Fixed:";
+        });
+
         // Funkcja obsługująca kliknięcie przycisku 1
         document.getElementById("customButton2").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
@@ -159,7 +190,7 @@
 
             `;
             // Aktualizacja nagłówków
-            document.getElementById("container2Header").innerText = "19.03.2024";
+            document.getElementById("container2Header").innerText = "19.03.2024 v.0.0.2";
             document.getElementById("container2Subheader").innerText = "Added:";
         });
 
@@ -170,6 +201,16 @@
             document.getElementById("container2Header").innerText = "That's where it all started :)";
             document.getElementById("container2Subheader").innerText = "";
         });
+        function toggleImageSize() {
+    var img = document.getElementById("hammerImage");
+    if (img.style.width === "70%") {
+        img.style.width = "100%";
+        img.style.height = "auto";
+    } else {
+        img.style.width = "70%";
+        img.style.height = "40%";
+    }
+}
     </script>
 </body>
 </html>

@@ -68,14 +68,13 @@
             flex-direction: column;
             justify-content: flex-start; /* Umieść na samej górze */
             align-items: center;
-            overflow: hidden;
         }
         
         .content {
             background-color: #f0f0f0;
             text-align: center;
         }
-        
+        #customButton3,
         #customButton2,
         #customButton1 {
             display: block;
@@ -161,7 +160,7 @@
                 width: 50%;
                 height: 75%;
             }
-            #customButton1, #customButton2{
+            #customButton1, #customButton2,#customButton3{
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -182,13 +181,14 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton3">0.0.2.1</button>
             <button id="customButton2">0.0.2</button>
             <button id="customButton1">0.0.1</button>
         </div>
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">18.03.2024</h1>
+            <h1 id="container2Header"></h1>
             <div class="text-left" id="container2Content">
                 
             </div>
@@ -202,11 +202,13 @@
     </div>
     <script>
         // Początkowy tekst w nagłówku kontenera 2
-        document.getElementById("container2Header").innerText = "Horror_game v.0.0.2";
-        document.getElementById("middleButton").innerText = "0.0.2";
-        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Added:</strong><br>- Settings button<br>- Settings menu<br>- Sensitivity customization<br>- Build version in game (top right corner)<br>- Option to turn on/off Build version in game";
+        document.getElementById("container2Header").innerText = "Horror_game v.0.0.2.1";
+        document.getElementById("middleButton").innerText = "0.0.2.1";
+        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Version 0.0.2 was veeeeery buggy. I decided to fix those bugs and I also edited map (just a bit). You can read more by clicking button below";
         // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
+
+
     
         // Obsługa kliknięcia przycisku "0.0.1"
         document.getElementById("customButton1").addEventListener("click", function() {
@@ -230,6 +232,18 @@
             // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/t5840gfpw0cm7z2/Horror_game_0.0.2.apk/file";
+            };
+        });
+
+        // Obsługa kliknięcia przycisku "0.0.2.1"
+        document.getElementById("customButton3").addEventListener("click", function() {
+            document.getElementById("container2Header").innerText = "Horror_game v.0.0.2.1";
+            document.getElementById("middleButton").innerText = "0.0.2.1"; // Ustawienie tekstu przycisku "Click me"
+            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.querySelector(".readMoreContainer p").innerHTML = "<strong>Version 0.0.2 was veeeeery buggy. I decided to fix those bugs and I also edited map (just a bit). You can read more by clicking button below";;
+            // Przekierowanie użytkownika na stronę Yandere Simulator
+            document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://www.mediafire.com/file/u5r4ebh7t2kgc8z/Horror_game_0.0.2.1.apk/file";
             };
         });
     
