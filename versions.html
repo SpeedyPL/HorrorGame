@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="https://github.com/SpeedyPL/Images_Testing/blob/main/icon_placeholder.png?raw=true">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -74,9 +75,11 @@
             background-color: #f0f0f0;
             text-align: center;
         }
+        
         #customButton3,
         #customButton2,
-        #customButton1 {
+        #customButton1,
+        #customButton4 {
             display: block;
             margin-bottom: 10px;
             width: 100%;
@@ -160,7 +163,7 @@
                 width: 50%;
                 height: 75%;
             }
-            #customButton1, #customButton2,#customButton3{
+            #customButton1, #customButton2,#customButton3, #customButton4{
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -181,6 +184,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton4">0.0.3</button>
             <button id="customButton3">0.0.2.1</button>
             <button id="customButton2">0.0.2</button>
             <button id="customButton1">0.0.1</button>
@@ -202,12 +206,14 @@
     </div>
     <script>
         // Początkowy tekst w nagłówku kontenera 2
-        document.getElementById("container2Header").innerText = "Horror_game v.0.0.2.1";
-        document.getElementById("middleButton").innerText = "0.0.2.1";
-        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Version 0.0.2 was veeeeery buggy. I decided to fix those bugs and I also edited map (just a bit). You can read more by clicking button below";
+        document.getElementById("container2Header").innerText = "Horror_game v.0.0.3";
+        document.getElementById("middleButton").innerText = "0.0.3";
+        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hi, since latest bug fixing build I did some improvements and added few things. You can read more here:";
         // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
-
+        document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://www.mediafire.com/file/n6vme84brtx8ywt/Horror_game_0.0.3.apk/file";
+            };
 
     
         // Obsługa kliknięcia przycisku "0.0.1"
@@ -244,6 +250,18 @@
             // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/u5r4ebh7t2kgc8z/Horror_game_0.0.2.1.apk/file";
+            };
+        });
+
+        // Obsługa kliknięcia przycisku "0.0.3"
+        document.getElementById("customButton4").addEventListener("click", function() {
+            document.getElementById("container2Header").innerText = "Horror_game v.0.0.3";
+            document.getElementById("middleButton").innerText = "0.0.3"; // Ustawienie tekstu przycisku "Click me"
+            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hi, since latest bug fixing build I did some improvements and added few things. You can read more here:";
+            // Przekierowanie użytkownika na stronę Yandere Simulator
+            document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://www.mediafire.com/file/n6vme84brtx8ywt/Horror_game_0.0.3.apk/file";
             };
         });
     

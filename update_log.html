@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="https://github.com/SpeedyPL/Images_Testing/blob/main/icon_placeholder.png?raw=true">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -73,7 +74,8 @@
         }
         #customButton3,
         #customButton2,
-        #customButton1 {
+        #customButton1,
+        #customButton4 {
             display: block;
             margin-bottom: 10px; /* Odstęp między przyciskami */
             width: 100%; /* Pełna szerokość przycisku */
@@ -107,7 +109,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3{
+            #customButton1, #customButton2,#customButton3,#customButton4{
                 font-size: 0.5rem;
             }
         }
@@ -121,6 +123,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton4">22.03.2024 (0.0.3)</button>
             <button id="customButton3">20.03.2024 (0.0.2.1)</button>
             <button id="customButton2">19.03.2024 (0.0.2)</button>
             <button id="customButton1">17.03.2024 (0.0.1)</button>
@@ -128,29 +131,43 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">20.03.2024 v.0.0.2.1 (Bug fixing build)</h1>
-            <h3 class="text-left" id="container2Subheader">Hello. Yesterday's build was veeeeery buggy, so I decided to make this Bug Fixing build. Besides fixing bugs I also added and improved some things. You can read about it below</h3>
+            <h1 id="container2Header">22.03.2024 v.0.0.3</h1>
+            <h3 class="text-left" id="container2Subheader">Hi, since latest bug fixing build I did some improvements and added few things. I also added a logo to my website :D .You can read more about it below: </h3>
             <div class="text-left" id="container2Content">
-                <h2>Fixed:</h2>
-                <p>- Buttons on some mobile devices were scaling really bad. I fixed it</p>
-                <p>- When the player picked up an object (in our case, a hammer) and then crouched while holding the object, the Y size of the object decreased twice. I fixed this bug</p>
-                <p>- When the player picked up the object (hammer) and then looked down, he flew away on the hammer (seriously XDD)(picture at the bottom of the page). Of course I fixed this bug </p>
-                <p>- Pick up button was visible while player was looking at any object. I fixed this bug</p>
-                <p>- When the player used the drop button, the item was able to fell off the map. I fixed this bug</p>
                 <h2>Added:</h2>
-                <p>- Second hammer to test pickup/drop system</p>
-                <p>- Light Bulb</p>
+                <p>- new room (at the moment without any furniture etc.)</p>
+                <p>- Light Switch (in the new room)</p>
                 <h2>Improvements:</h2>
-                <p>- Changed pickup/drop system. Now when player picks up an item, it appears at player's right hand. While crouching, item doesn't changes it's size. Now while player drops item, it gets dropped in front of the player (in version 0.0.2 it was simply dropped under the player). Also when player wants to pick up another item (while already holding other item), player drops item which he has in his hand and picks up item. </p>
-                <p>- Now we have 1 room in the game! It doesn't has any furniture etc. inside (besides light bulb), but I'll decorate it in the future builds!</p>
-                <p>- Changed door opening/closing animation (just a bit)</p>
-                <h2>Flying on hammer:</h2>
-                <img id="hammerImage" src="https://github.com/SpeedyPL/Images_Testing/blob/main/hammer_fly_bug.png?raw=true" alt="Flying on hammer" style="width: 70%; height: 40%;" onclick="toggleImageSize()">
+                <p>- I decided to change the first room in this update and boom! Now you can see a window (blocked by planks) and a table (you can crouch to go under it BUT IF YOU STAND UNDER THE TABLE YOU'LL BE UNABLE TO MOVE, if you want to move again just click the crouch button)</p>
+                <p>- Now jump button has a new texture! I think it's better than older one</p>
+                <p>- In older version there were 2 interaction buttons (one for picking up items and second for opening/closing door). Now you have one button for everything! You can open/close doors, turn on/off lights and pick up items with this one button. It also changes it's texture depending on action you want to do, just play and see :)</p>
+                <p>- I decided to delete second hammer. In the next update I'll add another item you can pick up and drop. If you left first room you surely saw that there's no hammer and no cabinet. Now they has new location</p>
+                <p>- I got reports that Sensitivity is really bad, I decided to change make camera 2 times more sensitive. I hope it will be good</p>
+                <h1>I will try to work on comment section,better website scaling for mobile devices and maybe a discord server soon!</h1>    
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.3
+            document.getElementById("customButton4").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- new room (at the moment without any furniture etc.)</p>
+                <p>- Light Switch (in the new room)</p>
+                <h2>Improvements:</h2>
+                <p>- I decided to change the first room in this update and boom! Now you can see a window (blocked by planks) and a table (you can crouch to go under it BUT IF YOU STAND UNDER THE TABLE YOU'LL BE UNABLE TO MOVE, if you want to move again just click the crouch button)</p>
+                <p>- Now jump button has a new texture! I think it's better than older one</p>
+                <p>- In older version there were 2 interaction buttons (one for picking up items and second for opening/closing door). Now you have one button for everything! You can open/close doors, turn on/off lights and pick up items with this one button. It also changes it's texture depending on action you want to do, just play and see :)</p>
+                <p>- I decided to delete second hammer. In the next update I'll add another item you can pick up and drop. If you left first room you surely saw that there's no hammer and no cabinet. Now they has new location</p>
+                <p>- I got reports that Sensitivity is really bad, I decided to change make camera 2 times more sensitive. I hope it will be good</p>
+                <h1>I will try to work on comment section,better website scaling for mobile devices and maybe a discord server soon!</h1> 
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "22.03.2024 v.0.0.3";
+            document.getElementById("container2Subheader").innerText = "Hi, since latest bug fixing build I did some improvements and added few things. I also added a logo to my website :D .You can read more about it below:";
+        });
 
         // Funkcja obsługująca kliknięcie przycisku 0.0.2.1
         document.getElementById("customButton3").addEventListener("click", function() {
