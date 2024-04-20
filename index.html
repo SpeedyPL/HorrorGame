@@ -1,190 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="https://github.com/SpeedyPL/Images_Testing/blob/main/icon_placeholder.png?raw=true">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horror Game</title>
+    <link rel="icon" type="image/png" href="https://github.com/SpeedyPL/Images_Testing/blob/main/icon_placeholder.png?raw=true">
     <style>
-        body {
+        html, body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
             background: linear-gradient(to bottom, #000000, #660000);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 0px solid rgba(255, 255, 255, 0.1);
-            resize: none;
         }
-        
-        .header {
-            color: #ffffff;
-            font-size: 2rem;
+
+        :root {
+            --button-width: 40%;
+            --button-height: 15%;
+        }
+
+        header {
             width: 100%;
             text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 999;
-            background-color: rgba(51, 51, 51, 0.484); /* Dodajemy przezroczystość do koloru tła */
+            background-color: rgba(51, 51, 51, 0.484);
+            padding: 10px;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        header button {
+            width: var(--button-width);
+            height: var(--button-height);
+            padding: 10px;
+            background-color: #FF0000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: calc(2.5vw + 1.5vh);
+        }
+
+        .dwnl-button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--button-width);
+            height: var(--button-height);
+            font-size: calc(2.5vw + 1.5vh);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
             padding: 20px;
-        }
-        
-        .header h1 {
-            margin: 0; /* Usuwamy margines dla nagłówka */
-        }
-        
-        .header-buttons {
-            display: flex;
-            width: 100%; /* Przyciski zajmują całą szerokość nagłówka */
-            justify-content: center; /* Wyśrodkowanie przycisków w poziomie */
-            margin-top: 10px; /* Dodajemy odstęp między nagłówkiem a przyciskami */
-        }
-        
-        .header-buttons button {
-            background-color: #ff0000;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 3vw; /* Zmiana rozmiaru czcionki przycisków na jednostki viewport width */
-            cursor: pointer;
-            margin: 0 2vw; /* Elastyczny margines w zależności od szerokości ekranu */
-            padding: 1.5vw 3vw; /* Elastyczne wypełnienie dla przycisków */
-        }
-        
-        .header-buttons button:hover {
-            background-color: #cc0000;
-        }
-        
-        .container {
-            width: 90%;
-            height: 90%;
-            min-height: 90vh;
-            max-height: 90vh;
             text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        main {
+            width: 100%;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 100px);
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 4vh;
-            margin: auto;
-            resize: none;
+            position: relative; 
         }
-        
+
+        .main_text {
+            color: #7FFF00;
+            font-size: 25px;
+            position: absolute; /* Ustawiamy pozycję absolutną */
+            bottom: -0.1%; /* Odległość od dolnego krawędzi main */
+            left: 35%;
+            transform: translateX(-35%); /* Przesuwamy tekst w lewo o połowę swojej szerokości */
+        }
+
         .title-image {
-            width: 80%;
-            margin: 2vh auto;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
-        
-        .download-button {
-            background-color: #ff0000;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 3vw;
-            cursor: pointer;
-            text-decoration: none;
-            margin-bottom: .5%;
-            width: 30%;
-            padding: 1.5% 5%;
+
+        .text-shadow{
+            font-size: 200%;
         }
-        
-        .download-button:hover {
-            background-color: #cc0000;
-            box-shadow: 0 0 2vh rgba(255, 255, 255, 0.5);
+
+        @keyframes glowing {
+            0% { color: pink; }
+            50% { color: #ff69b4; }
+            100% { color: pink; }
         }
-        
-        .download-info {
-            color: #ff00fb;
-            text-shadow: 0 0 2vh pink;
-            font-size: 2vw;
-            text-decoration: none;
-            margin-bottom: 0%;
-            margin-top: 0%;
-            width: 50%;
-            padding: 1.5% 5%;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            resize:none;
+
+        @media screen and (max-width: 500px) {
+            .dwnl-button {
+                height: 10%;
+            }
+            main {
+                margin-top: 15%;
+            }
+            .main_text{
+                font-size: 22px;
+            }
+            .text-shadow{
+                font-size: 150%;
+            }
         }
-        
-        .build-info {
-            color: #ffffff;
-            width: 30%;
-            font-size: 2.5vh;
-            position: absolute;
-            bottom: 0.3vh;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-bottom: 1vh;
-            white-space: nowrap;
-            resize: none;
+
+        @media screen and (max-width: 300px) {
+            .dwnl-button {
+                height: 5%;
+                width: 50%;
+            }
+            .main_text {
+                font-size: 20px;
+            }
+            main {
+                margin-top: 35%;
+            }
+            .text-shadow{
+                font-size: 100%;
+            }
         }
-        
-        .test_build {
-            color: #00ff5e;
-            width: 40%;
-            font-size: 4vh;
-            position: absolute;
-            bottom: 4vh;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-bottom: 1vh;
-            white-space: nowrap;
-            resize: none;
-        }
-        
-        @media screen and (max-width: 768px) {
-            .container {
-                height: 30vh;
-                width: 80%;
+
+        @media screen and (max-width: 150px) {
+            .dwnl-button {
+                width: 60%;
             }
-            .download-button {
-                padding: 1.5% 0;
+            .main_text {
+                font-size: 15px;
             }
-            .download-info {
-                padding: 1.5% 0;
+            main {
+                margin-top: 70%;
             }
-            .build-info {
-                font-size: 1vh;
-            }
-            .test_build{
-                font-size: 1vh;
-                bottom: 2vh;
-            }
-        
-            .header-buttons {
-                justify-content: center; /* Wyśrodkowanie przycisków w poziomie na mniejszych ekranach */
-                margin-top: 0; /* Usunięcie marginesu dla przycisków */
-            }
-            .header-buttons button {
-                font-size: 1rem; /* Zmniejszenie rozmiaru czcionki przycisków na mniejszych ekranach */
-                padding: 1.2vw 2.5vw; /* Elastyczne wypełnienie dla przycisków */
+            .text-shadow{
+                font-size: 60%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-buttons">
-            <a href="versions.html"><button class="version-button">Versions</button></a>
-            <a href="update_log.html"><button class="update-button">Update Log</button></a>
-        </div>
-    </div>
-    
-    <div class="container">
+    <header>
+        <button href="versions.html" id="versionsBtn" style="margin-left: 5%;">Versions</button>
+        <button href="update_log.html" id="updateLogBtn" style="margin-right: 5%;">Update Log</button>
+    </header>
+
+    <main>
         <img src="https://github.com/SpeedyPL/Images_Testing/blob/main/Title.png?raw=true" alt="Horror Game Logo" class="title-image">
-        <a class="download-button" href="https://www.mediafire.com/file/n6vme84brtx8ywt/Horror_game_0.0.3.apk/file" target="_blank">Download</a>
-        <p class="download-info">Click above to download</p>
-        <p class="test_build">This build is just for testing!</p>
-        <p class="build-info">Build from 22.03.2024</p>
-    </div>
+        <a href="https://www.mediafire.com/file/cim8rjsiia9p8uc/Horror_game_0.0.4.apk/file" target="_blank" class="dwnl-button" id="downloadBtn">Download</a>
+        <p style="text-align: center;">
+            <span style="animation: glowing 2s infinite;" class="text-shadow">
+                Click above to download
+            </span>
+        </p>
+    </main>
+
+    <footer>
+        Build from 20.04.2024
+    </footer>
+    <marquee direction="right" class="main_text">This build is just for testing!</marquee>
 </body>
 </html>
