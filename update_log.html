@@ -32,18 +32,19 @@
             font-family: 'Creepster', cursive;
         }
         
-        .goToPageButton {
+        header button{
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            left: 10px;
+            left: 1%;
             z-index: 9999;
             background-color: #ff0000;
             color: #ffffff;
             border: none;
             border-radius: 5px;
-            padding: 10px 20px;
+            padding: 1.5% 2.5%;
             cursor: pointer;
+            font-size: 100%;
         }
         
         .container {
@@ -72,10 +73,11 @@
             background-color: #f0f0f0;
             text-align: center;
         }
+        #customButton5,
+        #customButton4,
         #customButton3,
         #customButton2,
-        #customButton1,
-        #customButton4 {
+        #customButton1 {
             display: block;
             margin-bottom: 10px; /* Odstęp między przyciskami */
             width: 100%; /* Pełna szerokość przycisku */
@@ -94,22 +96,132 @@
             text-align: left;
         }
         
-        @media screen and (max-width: 768px) {
+        @media screen and (max-height: 600px) {
             header {
-                font-size: 0.8rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
             }
-            .goToPageButton{
-                font-size: 0.45rem;
+
+            header button{
+                padding: 1% 3%;
+                font-size: 100%;
             }
+
             .container{
-                width: 22%;
+                width: 37%;
+                height: 70%;
+                left: 1%;
+            }
+            .container2{
+                width: 50%;
+                height: 70%;
+                font-size: 0.8rem;
+            }
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 935px) {
+            header {
+                font-size: 1.5rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+
+            header button{
+                padding: 2% 4%;
+                font-size: 100%;
+            }
+
+            .container{
+                width: 37%;
                 left: 1%;
             }
             .container2{
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+
+            .container{
+                width: 33%;
+                left: 1%;
+            }
+            .container2{
+                width: 50%;
+                font-size: 0.8rem;
+            }
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+                font-size: 0.9rem;
+            }
+        }
+        @media screen and (max-width: 540px) {
+            header {
+                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+
+            .container{
+                width: 30%;
+                left: 1%;
+            }
+            .container2{
+                width: 50%;
+                font-size: 0.8rem;
+            }
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+                font-size: 0.7rem;
+            }
+        }
+        @media screen and (max-width: 445px) {
+            header {
+                font-size: 0.8rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+
+            .container{
+                width: 29%;
+                left: 1%;
+            }
+            .container2{
+                width: 40%;
+                font-size: 0.8rem;
+            }
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+                font-size: 0.7rem;
+            }
+        }
+        @media screen and (max-width: 280px) {            
+            header {
+                font-size: 0.6rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+            }
+
+            .container {
+            height: 20%;
+            width: 82%;
+            left: 0;
+            right: 0;
+            margin: 0;
+            position: absolute;
+            top: 12%; /* Ustawienie kontenera na górze */
+}
+
+            .container2 {
+            height: 50%;
+            width: 82%;
+            left: 0;
+            right: 0;
+            margin-top: 5%;
+            position: absolute;
+            top: 40%; /* Ustawienie kontenera 2 pod kontenerem */
+            overflow-y: auto;
+}
+
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
                 font-size: 0.5rem;
             }
         }
@@ -119,10 +231,11 @@
     <header>
         <h1>UPDATE LOG</h1>
         <!-- Przycisk do przekierowania na inną stronę -->
-        <button class="goToPageButton" onclick="window.location.href='https://speedypl.github.io/HorrorGame/'">Go back</button>
+        <button onclick="window.location.href='https://speedypl.github.io/HorrorGame/'">Go back</button>
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton5">20.04.2024 (0.0.4)</button>
             <button id="customButton4">22.03.2024 (0.0.3)</button>
             <button id="customButton3">20.03.2024 (0.0.2.1)</button>
             <button id="customButton2">19.03.2024 (0.0.2)</button>
@@ -131,24 +244,68 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">22.03.2024 v.0.0.3</h1>
-            <h3 class="text-left" id="container2Subheader">Hi, since latest bug fixing build I did some improvements and added few things. I also added a logo to my website :D .You can read more about it below: </h3>
+            <h1 id="container2Header">20.04.2024 v.0.0.4</h1>
+            <h3 class="text-left" id="container2Subheader">Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read about it below: </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- new room (at the moment without any furniture etc.)</p>
-                <p>- Light Switch (in the new room)</p>
+                <p>- broken wall (at the moment just for testing)</p>
+                <p>- eating room </p>
+                <p>- decorations to eating room </p>
+                <p>- a safe </p>
+                <p>- code numbers hidden in the eating room</p>
+                <p>- a screwdriver</p>
+                <p>- "check object" mechanic, honestly I don't know how to name it correctly, but you can test it by interracting with "Demons Origins" book (just an example) and moving your finger on the screen</p>
+                <p>- notes (for now they're in one place, but in next updates every note will be in different location</p>
+                <p>- my own font. Yes, I created my own font! It's used in UI, notes etc.)</p>
+                <p>- loading screen</p>
+                <p>- Walking and crouching animations!</p>
+                <p>- new character model:</p>
+                <img id="characterImg" src="https://github.com/SpeedyPL/Images_Testing/blob/main/character.png?raw=true" alt="new character model" style="width: 35%; height: 20%;">
                 <h2>Improvements:</h2>
-                <p>- I decided to change the first room in this update and boom! Now you can see a window (blocked by planks) and a table (you can crouch to go under it BUT IF YOU STAND UNDER THE TABLE YOU'LL BE UNABLE TO MOVE, if you want to move again just click the crouch button)</p>
-                <p>- Now jump button has a new texture! I think it's better than older one</p>
-                <p>- In older version there were 2 interaction buttons (one for picking up items and second for opening/closing door). Now you have one button for everything! You can open/close doors, turn on/off lights and pick up items with this one button. It also changes it's texture depending on action you want to do, just play and see :)</p>
-                <p>- I decided to delete second hammer. In the next update I'll add another item you can pick up and drop. If you left first room you surely saw that there's no hammer and no cabinet. Now they has new location</p>
-                <p>- I got reports that Sensitivity is really bad, I decided to change make camera 2 times more sensitive. I hope it will be good</p>
-                <h1>I will try to work on comment section,better website scaling for mobile devices and maybe a discord server soon!</h1>    
+                <p>- New UI images for some buttons</p>
+                <p>- [Website] better scaling for mobile devices</p>
+                <p>- [Website] new main page</p>
+                <p>- Better camera sensitivity</p>
+                <h2>Bug fixes:</h2>
+                <p>- due to making a mistake in my code, the item in player's hand was "laggy" while rotating or moving. I fixed this bug and now it's very smooth!</p>
+                <p>- since version 0.0.1, player was able to jump on the wall and stay in the middle of a wall. I fixed this bug</p>
+                <h2>Everyday I'm getting better at C# and Blender, so I'll try to make updates more often! Thanks for playing my game :D</h2>
             </div>
         </div>
     </div>
     
     <script>
+        // Funkcja obsługująca kliknięcie przycisku 0.0.4
+            document.getElementById("customButton5").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- broken wall (at the moment just for testing)</p>
+                <p>- eating room </p>
+                <p>- decorations to eating room </p>
+                <p>- safe </p>
+                <p>- code hidden in the eating room</p>
+                <p>- a screwdriver</p>
+                <p>- "check object" mechanic, honestly I don't know how to name it correctly, but you can test it by interracting with "Demons Origins" book (just an example) and moving your finger on the screen</p>
+                <p>- notes (for now they're in one place, but in next updates every note will be in different location</p>
+                <p>- my own font. Yes, I created my own font! It's used in UI, notes etc.)</p>
+                <p>- loading screen</p>
+                <p>- Walking and crouching animations!</p>
+                <p>- new character model:</p>
+                <img id="characterImg" src="https://github.com/SpeedyPL/Images_Testing/blob/main/character.png?raw=true" alt="new character model" style="width: 35%; height: 20%;">
+                <h2>Improvements:</h2>
+                <p>- New UI images for some buttons</p>
+                <p>- [Webstite] better scaling for mobile devices</p>
+                <p>- [Webstite] new main page</p>
+                <p>- Better camera sensitivity</p>
+                <h2>Bug fixes:</h2>
+                <p>- due to making a mistake in my code, the item in player's hand was "laggy" while rotating or moving. I fixed this bug and now it's very smooth!</p>
+                <p>- since version 0.0.1, player was able to jump on the wall and stay in the middle of a wall. I fixed this bug</p>
+                <h2>Everyday I'm getting better at C# and Blender, so I'll try to make updates more often! Thanks for playing my game :D</h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "20.04.2024 v.0.0.4";
+            document.getElementById("container2Subheader").innerText = "Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read about it below:";
+        });
 
         // Funkcja obsługująca kliknięcie przycisku 0.0.3
             document.getElementById("customButton4").addEventListener("click", function() {
