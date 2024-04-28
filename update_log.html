@@ -73,6 +73,7 @@
             background-color: #f0f0f0;
             text-align: center;
         }
+        #customButton6,
         #customButton5,
         #customButton4,
         #customButton3,
@@ -116,7 +117,7 @@
                 height: 70%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 1rem;
             }
         }
@@ -139,7 +140,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 1rem;
             }
         }
@@ -157,7 +158,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 0.9rem;
             }
         }
@@ -174,7 +175,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 0.7rem;
             }
         }
@@ -191,7 +192,7 @@
                 width: 40%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 0.7rem;
             }
         }
@@ -221,7 +222,7 @@
             overflow-y: auto;
 }
 
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
                 font-size: 0.5rem;
             }
         }
@@ -235,6 +236,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton6">28.04.2024 (0.0.5)</button>
             <button id="customButton5">20.04.2024 (0.0.4)</button>
             <button id="customButton4">22.03.2024 (0.0.3)</button>
             <button id="customButton3">20.03.2024 (0.0.2.1)</button>
@@ -244,37 +246,46 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">20.04.2024 v.0.0.4</h1>
-            <h3 class="text-left" id="container2Subheader">Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read about it below: </h3>
+            <h1 id="container2Header">28.04.2024 v.0.0.5</h1>
+            <h3 class="text-left" id="container2Subheader">Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more about it below: </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- broken wall (at the moment just for testing)</p>
-                <p>- eating room </p>
-                <p>- decorations to eating room </p>
-                <p>- a safe </p>
-                <p>- code numbers hidden in the eating room</p>
-                <p>- a screwdriver</p>
-                <p>- "check object" mechanic, honestly I don't know how to name it correctly, but you can test it by interracting with "Demons Origins" book (just an example) and moving your finger on the screen</p>
-                <p>- notes (for now they're in one place, but in next updates every note will be in different location</p>
-                <p>- my own font. Yes, I created my own font! It's used in UI, notes etc.)</p>
-                <p>- loading screen</p>
-                <p>- Walking and crouching animations!</p>
-                <p>- new character model:</p>
-                <img id="characterImg" src="https://github.com/SpeedyPL/Images_Testing/blob/main/character.png?raw=true" alt="new character model" style="width: 35%; height: 20%;">
+                <p>- change language option (44 languages)</p>
+                <p>- credits (you can see an author of every asset) </p>
                 <h2>Improvements:</h2>
-                <p>- New UI images for some buttons</p>
-                <p>- [Website] better scaling for mobile devices</p>
-                <p>- [Website] new main page</p>
-                <p>- Better camera sensitivity</p>
+                <p>- Now when you are checking an item, there will be a special background!</p>
                 <h2>Bug fixes:</h2>
-                <p>- due to making a mistake in my code, the item in player's hand was "laggy" while rotating or moving. I fixed this bug and now it's very smooth!</p>
-                <p>- since version 0.0.1, player was able to jump on the wall and stay in the middle of a wall. I fixed this bug</p>
-                <h2>Everyday I'm getting better at C# and Blender, so I'll try to make updates more often! Thanks for playing my game :D</h2>
+                <p>- Few minutes before exporting an .apk file I noticed that on some devices you can't event rotate camera! I'm really sorry for those users... but I fixed this bug!</p>
+                <p>- bad scaling in check mode, fixed</p>
+                <p>- there was a glitch in check mode: If you go to "Demons Origins" book, crouch in front of it and then go to check mode you'll be unable to rotate object, I fixed this bug</p>
+                <h2>I know I added only few thing in this update, but don't worry! Since coming Monday I'll have so much free time (14 days!) and I'll try to add... hahaha I won't say that... It'll be a surprise :D
+                    Oh I almost forgot, at the moment Credits are only displayed in 2 languages (English and Polish)
+                </h2>
             </div>
         </div>
     </div>
     
     <script>
+        // Funkcja obsługująca kliknięcie przycisku 0.0.5
+        document.getElementById("customButton6").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- change language option (44 languages)</p>
+                <p>- credits (you can see an author of every asset) </p>
+                <h2>Improvements:</h2>
+                <p>- Now when you are checking an item, there will be a special background!</p>
+                <h2>Bug fixes:</h2>
+                <p>- Few minutes before exporting an .apk file I noticed that on some devices you can't event rotate camera! I'm really sorry for those users... but I fixed this bug!</p>
+                <p>- bad scaling in check mode, fixed</p>
+                <p>- there was a glitch in check mode: If you go to "Demons Origins" book, crouch in front of it and then go to check mode you'll be unable to rotate object, I fixed this bug</p>
+                <h2>I know I added only few thing in this update, but don't worry! Since coming Monday I'll have so much free time (14 days!) and I'll try to add... hahaha I won't say that... It'll be a surprise :D
+                    Oh I almost forgot, at the moment Credits are only displayed in 2 languages (English and Polish)
+                </h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "28.04.2024 v.0.0.5";
+            document.getElementById("container2Subheader").innerText = "Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more about it below:";
+        });
         // Funkcja obsługująca kliknięcie przycisku 0.0.4
             document.getElementById("customButton5").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `

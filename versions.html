@@ -77,6 +77,7 @@
             text-align: center;
         }
         
+        #customButton6,
         #customButton5,
         #customButton4,
         #customButton3,
@@ -165,7 +166,7 @@
                 width: 50%;
                 height: 75%;
             }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6{
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -194,7 +195,7 @@
                 height: 75%;
                 margin-bottom: 20%;
             }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6{
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -238,7 +239,7 @@
             top: 40%; /* Ustawienie kontenera 2 pod kontenerem */
             overflow-y: auto;
 }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6{
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -264,6 +265,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton6">0.0.5</button>
             <button id="customButton5">0.0.4</button>
             <button id="customButton4">0.0.3</button>
             <button id="customButton3">0.0.2.1</button>
@@ -287,13 +289,13 @@
     </div>
     <script>
         // Początkowy tekst w nagłówku kontenera 2
-        document.getElementById("container2Header").innerText = "Horror_game v.0.0.4";
-        document.getElementById("middleButton").innerText = "0.0.4";
-        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read more here:";
+        document.getElementById("container2Header").innerText = "Horror_game v.0.0.5";
+        document.getElementById("middleButton").innerText = "0.0.5";
+        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more in Update Log";
         // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
         document.getElementById("middleButton").onclick = function() {
-                window.location.href = "https://www.mediafire.com/file/cim8rjsiia9p8uc/Horror_game_0.0.4.apk/file";
+                window.location.href = "https://www.mediafire.com/file/b3s3yi396uqtn8c/Horror_game_0.0.5.apk/file";
             };
 
     
@@ -355,6 +357,18 @@
             // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/cim8rjsiia9p8uc/Horror_game_0.0.4.apk/file";
+            };
+        });
+
+        // Obsługa kliknięcia przycisku "0.0.5"
+        document.getElementById("customButton6").addEventListener("click", function() {
+            document.getElementById("container2Header").innerText = "Horror_game v.0.0.5";
+            document.getElementById("middleButton").innerText = "0.0.5"; // Ustawienie tekstu przycisku "Click me"
+            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more in Update Log";
+            // Przekierowanie użytkownika na stronę Yandere Simulator
+            document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://www.mediafire.com/file/b3s3yi396uqtn8c/Horror_game_0.0.5.apk/file";
             };
         });
     
