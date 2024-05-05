@@ -73,6 +73,8 @@
             background-color: #f0f0f0;
             text-align: center;
         }
+
+        #customButton7,
         #customButton6,
         #customButton5,
         #customButton4,
@@ -117,7 +119,7 @@
                 height: 70%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 1rem;
             }
         }
@@ -140,7 +142,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 1rem;
             }
         }
@@ -158,7 +160,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 0.9rem;
             }
         }
@@ -175,7 +177,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 0.7rem;
             }
         }
@@ -192,7 +194,7 @@
                 width: 40%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 0.7rem;
             }
         }
@@ -222,7 +224,7 @@
             overflow-y: auto;
 }
 
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
                 font-size: 0.5rem;
             }
         }
@@ -236,6 +238,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton7">05.05.2024 (0.0.6)</button>
             <button id="customButton6">28.04.2024 (0.0.5)</button>
             <button id="customButton5">20.04.2024 (0.0.4)</button>
             <button id="customButton4">22.03.2024 (0.0.3)</button>
@@ -246,26 +249,60 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">28.04.2024 v.0.0.5</h1>
-            <h3 class="text-left" id="container2Subheader">Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more about it below: </h3>
+            <h1 id="container2Header">05.05.2024 v.0.0.6</h1>
+            <h3 class="text-left" id="container2Subheader">Hello! I was working really hard since last update. I added some interesting things! You can read more about it below: </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- change language option (44 languages)</p>
-                <p>- credits (you can see an author of every asset) </p>
+                <p>- FPS Counter (max rate = 60fps)</p>
+                <p>- 3 paintings in rooms </p>
+                <p>- drop painting after getting close to it (you must look at it) </p>
+                <p>- blocked door </p>
+                <p>- possibility of unblocking the door </p>
+                <p>- settings button </p>
+                <p>- Settings menu (at the moment you can't open this menu) </p>
+                <p>- Settings menu is fully translated </p>
                 <h2>Improvements:</h2>
-                <p>- Now when you are checking an item, there will be a special background!</p>
+                <p>- it'll tell you what item you need to open doors etc.</p>
+                <p>- now selected language will save </p>
+                <p>- better Starting screen </p>
+                <p>- darker scene </p>
                 <h2>Bug fixes:</h2>
-                <p>- Few minutes before exporting an .apk file I noticed that on some devices you can't event rotate camera! I'm really sorry for those users... but I fixed this bug!</p>
-                <p>- bad scaling in check mode, fixed</p>
-                <p>- there was a glitch in check mode: If you go to "Demons Origins" book, crouch in front of it and then go to check mode you'll be unable to rotate object, I fixed this bug</p>
-                <h2>I know I added only few thing in this update, but don't worry! Since coming Monday I'll have so much free time (14 days!) and I'll try to add... hahaha I won't say that... It'll be a surprise :D
-                    Oh I almost forgot, at the moment Credits are only displayed in 2 languages (English and Polish)
-                </h2>
+                <p>- If you crouch and then go to Check Mode, the background would be too high. It was my mistake and I fixed this!</p>
+                <p>- On SAMSUNG GALAXY Z FOLD2 5G Language menu and Main menu was scaling veeeeeery bad. I fixed it!</p>
+                <h2>If you want to report a bug go to "COMMENT" option!</h2>
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.6
+        document.getElementById("customButton7").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- FPS Counter (max rate = 60fps)</p>
+                <p>- 3 paintings in rooms </p>
+                <p>- drop painting after getting close to it (you must look at it) </p>
+                <p>- blocked door </p>
+                <p>- possibility of unblocking the door </p>
+                <p>- settings button </p>
+                <p>- Settings menu (at the moment you can't open this menu) </p>
+                <p>- Settings menu is fully translated </p>
+                <h2>Improvements:</h2>
+                <p>- it'll tell you what item you need to open doors etc.</p>
+                <p>- now selected language will save </p>
+                <p>- better Starting screen </p>
+                <p>- darker scene </p>
+                <h2>Bug fixes:</h2>
+                <p>- If you crouch and then go to Check Mode, the background would be too high. It was my mistake and I fixed this!</p>
+                <p>- On SAMSUNG GALAXY Z FOLD2 5G Language menu and Main menu was scaling veeeeeery bad. I fixed it!</p>
+                <h2>If you want to report a bug go to "COMMENT" option!</h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "05.05.2024 v.0.0.6";
+            document.getElementById("container2Subheader").innerText = "Hello! I was working really hard since last update. I added some interesting things! You can read more about it below:";
+        });
+
         // Funkcja obsługująca kliknięcie przycisku 0.0.5
         document.getElementById("customButton6").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
