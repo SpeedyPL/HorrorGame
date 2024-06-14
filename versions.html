@@ -76,7 +76,7 @@
             background-color: #f0f0f0;
             text-align: center;
         }
-
+        #customButton8,
         #customButton7,
         #customButton6,
         #customButton5,
@@ -167,7 +167,9 @@
                 width: 50%;
                 height: 75%;
             }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
+            #customButton8
+            {
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -196,7 +198,9 @@
                 height: 75%;
                 margin-bottom: 20%;
             }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
+            #customButton8
+            {
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -240,7 +244,9 @@
             top: 40%; /* Ustawienie kontenera 2 pod kontenerem */
             overflow-y: auto;
 }
-            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7{
+            #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
+            #customButton8
+            {
                 font-size: 0.75rem;
             }
             .readMoreContainer{
@@ -266,6 +272,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton8">0.0.7</button>
             <button id="customButton7">0.0.6</button>
             <button id="customButton6">0.0.5</button>
             <button id="customButton5">0.0.4</button>
@@ -291,13 +298,13 @@
     </div>
     <script>
         // Początkowy tekst w nagłówku kontenera 2
-        document.getElementById("container2Header").innerText = "Horror_game v.0.0.6";
-        document.getElementById("middleButton").innerText = "0.0.6";
-        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! I was working really hard since last update. I added some interesting things! You can read more in Update Log";
+        document.getElementById("container2Header").innerText = "Horror_game v.0.0.7";
+        document.getElementById("middleButton").innerText = "0.0.7";
+        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! It's been over a month since last update. I added some interesting things and you know where you can read about them haha";
         // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
         document.getElementById("middleButton").onclick = function() {
-                window.location.href = "https://www.mediafire.com/file/3zzr2atkwv9uy9y/Horror_game_0.0.6.apk/file";
+                window.location.href = "https://link-center.net/1180106/horror-game-007";
             };
 
     
@@ -383,6 +390,18 @@
             // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/3zzr2atkwv9uy9y/Horror_game_0.0.6.apk/file";
+            };
+        });
+
+        // Obsługa kliknięcia przycisku "0.0.7"
+        document.getElementById("customButton8").addEventListener("click", function() {
+            document.getElementById("container2Header").innerText = "Horror_game v.0.0.7";
+            document.getElementById("middleButton").innerText = "0.0.7"; // Ustawienie tekstu przycisku "Click me"
+            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! It's been over a month since last update. I added some interesting things and you know where you can read about them haha";
+            // Przekierowanie użytkownika na stronę Yandere Simulator
+            document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://link-center.net/1180106/horror-game-007";
             };
         });
     
