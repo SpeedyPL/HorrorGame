@@ -74,6 +74,7 @@
             text-align: center;
         }
 
+        #customButton8,
         #customButton7,
         #customButton6,
         #customButton5,
@@ -119,7 +120,7 @@
                 height: 70%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 1rem;
             }
         }
@@ -142,7 +143,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 1rem;
             }
         }
@@ -160,7 +161,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 0.9rem;
             }
         }
@@ -177,7 +178,7 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 0.7rem;
             }
         }
@@ -194,7 +195,7 @@
                 width: 40%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 0.7rem;
             }
         }
@@ -224,7 +225,7 @@
             overflow-y: auto;
 }
 
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
                 font-size: 0.5rem;
             }
         }
@@ -238,6 +239,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton8">14.06.2024 (0.0.7)</button>
             <button id="customButton7">05.05.2024 (0.0.6)</button>
             <button id="customButton6">28.04.2024 (0.0.5)</button>
             <button id="customButton5">20.04.2024 (0.0.4)</button>
@@ -249,32 +251,61 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">05.05.2024 v.0.0.6</h1>
-            <h3 class="text-left" id="container2Subheader">Hello! I was working really hard since last update. I added some interesting things! You can read more about it below: </h3>
+            <h1 id="container2Header">14.06.2024 v.0.0.7</h1>
+            <h3 class="text-left" id="container2Subheader">Hello! It's been over a month since last update. I added some interesting things and you can read about them below: </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- FPS Counter (max rate = 60fps)</p>
-                <p>- 3 paintings in rooms </p>
-                <p>- drop painting after getting close to it (you must look at it) </p>
-                <p>- blocked door </p>
-                <p>- possibility of unblocking the door </p>
-                <p>- settings button </p>
-                <p>- Settings menu (at the moment you can't open this menu) </p>
+                <p>- new item (plank)</p>
+                <p>- 2 new rooms </p>
+                <p>- furniture in the 2 new rooms</p>
+                <p>- a way to use the plank</p>
+                <p>- keybinds for PC! (I made it for me to test my game faster and for people using emulators :D, on the bottom I'll write all keybinds)</p>
+                <p>- settings menu (at starting screen) </p>
+                <p>- saving almost all settings (except Quality but I'll try to add this in the next update!) </p>
                 <p>- Settings menu is fully translated </p>
                 <h2>Improvements:</h2>
-                <p>- it'll tell you what item you need to open doors etc.</p>
-                <p>- now selected language will save </p>
-                <p>- better Starting screen </p>
-                <p>- darker scene </p>
-                <h2>Bug fixes:</h2>
-                <p>- If you crouch and then go to Check Mode, the background would be too high. It was my mistake and I fixed this!</p>
-                <p>- On SAMSUNG GALAXY Z FOLD2 5G Language menu and Main menu was scaling veeeeeery bad. I fixed it!</p>
+                <p>- better performance on VERY LOW, LOW and MEDIUM graphics quality</p>
+                <h2>Keybinds:</h2>
+                <p>- WALK: W,A,S,D</p>
+                <p>- INTERACTIONS: E</p>
+                <p>- DROP: Q</p>
+                <p>- JUMP: SPACE</p>
+                <p>- CROUCH: LEFT CTRL</p>
+                <p>- OPEN/CLOSE SETTINGS: ESC</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.7
+        document.getElementById("customButton8").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- new item (plank)</p>
+                <p>- 2 new rooms </p>
+                <p>- furniture in the 2 new rooms</p>
+                <p>- a way to use the plank</p>
+                <p>- keybinds for PC! (I made it for me to test my game faster and for people using emulators :D, on the bottom I'll write all keybinds)</p>
+                <p>- settings menu (at starting screen) </p>
+                <p>- saving almost all settings (except Quality but I'll try to add this in the next update!) </p>
+                <p>- Settings menu is fully translated </p>
+                <h2>Improvements:</h2>
+                <p>- better performance on VERY LOW, LOW and MEDIUM graphics quality</p>
+                <h2>Keybinds:</h2>
+                <p>- WALK: W,A,S,D</p>
+                <p>- INTERACTIONS: E</p>
+                <p>- DROP: Q</p>
+                <p>- JUMP: SPACE</p>
+                <p>- CROUCH: LEFT CTRL</p>
+                <p>- OPEN/CLOSE SETTINGS: ESC</p>
+                <h2>If you want to report a bug go to "COMMENT" option!</h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "14.06.2024 v.0.0.7";
+            document.getElementById("container2Subheader").innerText = "Hello! It's been over a month since last update. I added some interesting things and you can read about them below: ";
+        });
 
         // Funkcja obsługująca kliknięcie przycisku 0.0.6
         document.getElementById("customButton7").addEventListener("click", function() {
