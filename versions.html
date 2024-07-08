@@ -76,6 +76,7 @@
             background-color: #f0f0f0;
             text-align: center;
         }
+        #customButton9,
         #customButton8,
         #customButton7,
         #customButton6,
@@ -168,7 +169,7 @@
                 height: 75%;
             }
             #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
-            #customButton8
+            #customButton8,#customButton9
             {
                 font-size: 0.75rem;
             }
@@ -199,7 +200,7 @@
                 margin-bottom: 20%;
             }
             #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
-            #customButton8
+            #customButton8,#customButton9
             {
                 font-size: 0.75rem;
             }
@@ -245,7 +246,7 @@
             overflow-y: auto;
 }
             #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
-            #customButton8
+            #customButton8,#customButton9
             {
                 font-size: 0.75rem;
             }
@@ -272,6 +273,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton9">0.0.8</button>
             <button id="customButton8">0.0.7</button>
             <button id="customButton7">0.0.6</button>
             <button id="customButton6">0.0.5</button>
@@ -298,13 +300,13 @@
     </div>
     <script>
         // Początkowy tekst w nagłówku kontenera 2
-        document.getElementById("container2Header").innerText = "Horror_game v.0.0.7";
-        document.getElementById("middleButton").innerText = "0.0.7";
-        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! It's been over a month since last update. I added some interesting things and you know where you can read about them haha";
+        document.getElementById("container2Header").innerText = "Horror_game v.0.0.8";
+        document.getElementById("middleButton").innerText = "0.0.8";
+        document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Today I won't write many things here, just read Update Log hah";
         // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
         document.getElementById("middleButton").onclick = function() {
-                window.location.href = "https://link-center.net/1180106/horror-game-007";
+                window.location.href = "https://link-center.net/1180106/horror-game-008";
             };
 
     
@@ -402,6 +404,18 @@
             // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://link-center.net/1180106/horror-game-007";
+            };
+        });
+
+        // Obsługa kliknięcia przycisku "0.0.8"
+        document.getElementById("customButton9").addEventListener("click", function() {
+            document.getElementById("container2Header").innerText = "Horror_game v.0.0.8";
+            document.getElementById("middleButton").innerText = "0.0.8"; // Ustawienie tekstu przycisku "Click me"
+            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Today I won't write many things here, just read Update Log hah";
+            // Przekierowanie użytkownika na stronę Yandere Simulator
+            document.getElementById("middleButton").onclick = function() {
+                window.location.href = "https://link-center.net/1180106/horror-game-008";
             };
         });
     

@@ -74,6 +74,7 @@
             text-align: center;
         }
 
+        #customButton9,
         #customButton8,
         #customButton7,
         #customButton6,
@@ -120,7 +121,9 @@
                 height: 70%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8
+            #customButton9
+            {
                 font-size: 1rem;
             }
         }
@@ -143,7 +146,9 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9
+            {
                 font-size: 1rem;
             }
         }
@@ -161,7 +166,9 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9
+            {
                 font-size: 0.9rem;
             }
         }
@@ -178,7 +185,9 @@
                 width: 50%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9
+            {
                 font-size: 0.7rem;
             }
         }
@@ -195,7 +204,9 @@
                 width: 40%;
                 font-size: 0.8rem;
             }
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9
+            {
                 font-size: 0.7rem;
             }
         }
@@ -225,7 +236,9 @@
             overflow-y: auto;
 }
 
-            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8{
+            #customButton9#customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9
+            {
                 font-size: 0.5rem;
             }
         }
@@ -239,6 +252,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton9">08.07.2024 (0.0.8)</button>
             <button id="customButton8">14.06.2024 (0.0.7)</button>
             <button id="customButton7">05.05.2024 (0.0.6)</button>
             <button id="customButton6">28.04.2024 (0.0.5)</button>
@@ -251,25 +265,51 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">14.06.2024 v.0.0.7</h1>
-            <h3 class="text-left" id="container2Subheader">Hello! It's been over a month since last update. I added some interesting things and you can read about them below: </h3>
+            <h1 id="container2Header">08.07.2024 v.0.0.8</h1>
+            <h3 class="text-left" id="container2Subheader">Hello! Lately I was working on adding some use to the key in the safe, you can read more about it below: </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- new item (plank)</p>
-                <p>- 2 new rooms </p>
-                <p>- furniture in the 2 new rooms</p>
-                <p>- a way to use the plank</p>
-                <p>- settings menu (at starting screen) </p>
-                <p>- saving almost all settings (except Quality but I'll try to add this in the next update!) </p>
-                <p>- Settings menu is fully translated </p>
+                <p>- 1 new room</p>
+                <p>- furniture in the new room </p>
+                <p>- use of the key</p>
+                <p>- new item (ladder)</p>
+                <p>- use of the ladder</p>
+                <p>- framerate setting in the settings in main menu</p>
+                <p>- saving framerate and quality settings</p>
                 <h2>Improvements:</h2>
-                <p>- better performance on VERY LOW, LOW and MEDIUM graphics quality</p>
+                <p>- better hammer texture</p>
+                <p>- bigger collider to place a plank</p>
+                <h2>IMPORTANT CHANGES</h2>
+                <p>- deleted CREDITS and LANGUAGE panel (They will be added back in v.1.0.0)</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.8
+        document.getElementById("customButton9").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- 1 new room</p>
+                <p>- furniture in the new room </p>
+                <p>- use of the key</p>
+                <p>- new item (ladder)</p>
+                <p>- use of the ladder</p>
+                <p>- framerate setting in the settings in main menu</p>
+                <p>- saving framerate and quality settings</p>
+                <h2>Improvements:</h2>
+                <p>- better hammer texture</p>
+                <p>- bigger collider to place a plank</p>
+                <h2>IMPORTANT CHANGES</h2>
+                <p>- deleted CREDITS and LANGUAGE panel (They will be added back in v.1.0.0)</p>
+                <h2>If you want to report a bug go to "COMMENT" option!</h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "08.07.2024 v.0.0.8";
+            document.getElementById("container2Subheader").innerText = "Hello! Lately I was working on adding some use to the key in the safe, you can read more about it below: ";
+        });
 
         // Funkcja obsługująca kliknięcie przycisku 0.0.7
         document.getElementById("customButton8").addEventListener("click", function() {
@@ -279,11 +319,19 @@
                 <p>- 2 new rooms </p>
                 <p>- furniture in the 2 new rooms</p>
                 <p>- a way to use the plank</p>
+                <p>- keybinds for PC! (I made it for me to test my game faster and for people using emulators :D, on the bottom I'll write all keybinds)</p>
                 <p>- settings menu (at starting screen) </p>
                 <p>- saving almost all settings (except Quality but I'll try to add this in the next update!) </p>
                 <p>- Settings menu is fully translated </p>
                 <h2>Improvements:</h2>
                 <p>- better performance on VERY LOW, LOW and MEDIUM graphics quality</p>
+                <h2>Keybinds:</h2>
+                <p>- WALK: W,A,S,D</p>
+                <p>- INTERACTIONS: E</p>
+                <p>- DROP: Q</p>
+                <p>- JUMP: SPACE</p>
+                <p>- CROUCH: LEFT CTRL</p>
+                <p>- OPEN/CLOSE SETTINGS: ESC</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             `;
             // Aktualizacja nagłówków
