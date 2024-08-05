@@ -74,6 +74,7 @@
             text-align: center;
         }
 
+        #customButton10,
         #customButton9,
         #customButton8,
         #customButton7,
@@ -122,7 +123,7 @@
                 font-size: 0.8rem;
             }
             #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8
-            #customButton9
+            #customButton9, #customButton10
             {
                 font-size: 1rem;
             }
@@ -147,7 +148,7 @@
                 font-size: 0.8rem;
             }
             #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
-            #customButton9
+            #customButton9, #customButton10
             {
                 font-size: 1rem;
             }
@@ -167,7 +168,7 @@
                 font-size: 0.8rem;
             }
             #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
-            #customButton9
+            #customButton9, #customButton10
             {
                 font-size: 0.9rem;
             }
@@ -186,7 +187,7 @@
                 font-size: 0.8rem;
             }
             #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
-            #customButton9
+            #customButton9, #customButton10
             {
                 font-size: 0.7rem;
             }
@@ -205,7 +206,7 @@
                 font-size: 0.8rem;
             }
             #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
-            #customButton9
+            #customButton9, #customButton10
             {
                 font-size: 0.7rem;
             }
@@ -236,8 +237,8 @@
             overflow-y: auto;
 }
 
-            #customButton9#customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
-            #customButton9
+            #customButton1, #customButton2,#customButton3,#customButton4,#customButton5,#customButton6,#customButton7,#customButton8,
+            #customButton9, #customButton10
             {
                 font-size: 0.5rem;
             }
@@ -252,6 +253,7 @@
     </header>
     <div class="container">
         <div class="content">
+            <button id="customButton10">05.08.2024 (0.0.9)</button>
             <button id="customButton9">08.07.2024 (0.0.8)</button>
             <button id="customButton8">14.06.2024 (0.0.7)</button>
             <button id="customButton7">05.05.2024 (0.0.6)</button>
@@ -265,28 +267,63 @@
     </div>
     <div class="container2">
         <div class="content">
-            <h1 id="container2Header">08.07.2024 v.0.0.8</h1>
-            <h3 class="text-left" id="container2Subheader">Hello! Lately I was working on adding some use to the key in the safe, you can read more about it below: </h3>
+            <h1 id="container2Header">05.08.2024 v.0.0.9</h1>
+            <h3 class="text-left" id="container2Subheader">Hello! How it's going hehe? I haven't added many things in this update. It's holidays time so I was spending so much time with my family and my frinds. Soooo let's see what's new in this update! </h3>
             <div class="text-left" id="container2Content">
                 <h2>Added:</h2>
-                <p>- 1 new room</p>
-                <p>- furniture in the new room </p>
-                <p>- use of the key</p>
-                <p>- new item (ladder)</p>
-                <p>- use of the ladder</p>
-                <p>- framerate setting in the settings in main menu</p>
-                <p>- saving framerate and quality settings</p>
+                <p>- flashlight</p>
+                <p>- 1 new room </p>
+                <p>- use of the screwdriver</p>
+                <p>- possibility of picking up cardboards in the bathroom</p>
+                <p>- use of the cardboards</p>
+                <p>- fog</p>
                 <h2>Improvements:</h2>
-                <p>- better hammer texture</p>
-                <p>- bigger collider to place a plank</p>
+                <p>- now every wall has a texture (not their own texture but they will have in future updates!)</p>
+                <p>- darker scene</p>
+                <p>- changed almost every room's location</p>
+                <h2>Fixes:</h2>
+                <p>- on some devices "Unlimited fps" were capped at their phone's refresh rate, now it can go higher than that!</p>
                 <h2>IMPORTANT CHANGES</h2>
-                <p>- deleted CREDITS and LANGUAGE panel (They will be added back in v.1.0.0)</p>
-                <h2>If you want to report a bug go to "COMMENT" option!</h2>
+                <p> I'VE ADDED "SUPPORT ME" OPTION IN THE MAIN PAGE. HERE YOU CAN SEND ME MONEY ON PAYPAL!</p>
+                <p></p>
+                <p> IN THE BATHROOM YOU CAN SEE GREEN CUBE, IT'S THE PLACE WHERE YOU SHOULD PLACE CARDBOARDS!</p>
+                <p></p>
+                <p></p>
+                <h2>If you want to report a bug or give me ideas for the next updates, go to "COMMENT" option!</h2>
             </div>
         </div>
     </div>
     
     <script>
+
+        // Funkcja obsługująca kliknięcie przycisku 0.0.9
+        document.getElementById("customButton10").addEventListener("click", function() {
+            document.getElementById("container2Content").innerHTML = `
+            <h2>Added:</h2>
+                <p>- flashlight</p>
+                <p>- 1 new room </p>
+                <p>- use of the screwdriver</p>
+                <p>- possibility of picking up cardboards in the bathroom</p>
+                <p>- use of the cardboards</p>
+                <p>- fog</p>
+                <h2>Improvements:</h2>
+                <p>- now every wall has a texture (not their own texture but they will have in future updates!)</p>
+                <p>- darker scene</p>
+                <p>- changed almost every room's location</p>
+                <h2>Fixes:</h2>
+                <p>- on some devices "Unlimited fps" were capped at their phone's refresh rate, now it can go higher than that!</p>
+                <h2>IMPORTANT CHANGES</h2>
+                <p> I'VE ADDED "SUPPORT ME" OPTION IN THE MAIN PAGE. HERE YOU CAN SEND ME MONEY ON PAYPAL!</p>
+                <p></p>
+                <p> IN THE BATHROOM YOU CAN SEE GREEN CUBE, IT'S THE PLACE WHERE YOU SHOULD PLACE CARDBOARDS!</p>
+                <p></p>
+                <p></p>
+                <h2>If you want to report a bug or give me ideas for the next updates, go to "COMMENT" option!</h2>
+            `;
+            // Aktualizacja nagłówków
+            document.getElementById("container2Header").innerText = "05.08.2024 v.0.0.9";
+            document.getElementById("container2Subheader").innerText = "Hello! How it's going hehe? I haven't added many things in this update. It's holidays time so I was spending so much time with my family and my frinds. Soooo let's see what's new in this update! ";
+        });
 
         // Funkcja obsługująca kliknięcie przycisku 0.0.8
         document.getElementById("customButton9").addEventListener("click", function() {
