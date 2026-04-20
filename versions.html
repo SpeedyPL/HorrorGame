@@ -68,7 +68,7 @@
             background-color: #f0f0f0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Umieść na samej górze */
+            justify-content: flex-start;
             align-items: center;
         }
         
@@ -93,18 +93,18 @@
         }
         
         #container2Header {
-            align-self: flex-start; /* Umieść na samej górze kontenera */
+            align-self: flex-start;
             text-align: center;
-            margin-bottom: 20px; /* Dodajemy odstęp na dole nagłówka */
+            margin-bottom: 20px;
         }
         
         #container2Content {
-            display: none; /* Ukrywamy zawartość */
+            display: none;
         }
 
         #middleButton {
-            font-size: 1rem; /* Zwiększamy rozmiar przycisku */
-            padding: 15px 30px; /* Zwiększamy odstępy wewnętrzne przycisku */
+            font-size: 1rem;
+            padding: 15px 30px;
             background-color: darkred;
             cursor: pointer;
             border-radius: 15px;
@@ -138,14 +138,14 @@
         }
 
         .readMoreButton {
-            margin-top: 10px; /* Dodajemy odstęp nad przyciskiem */
+            margin-top: 10px;
             background-color: #ff0000;
             color: #ffffff;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
             cursor: pointer;
-            text-decoration: none; /* Usuwamy podkreślenie tekstu */
+            text-decoration: none;
             text-align: center;
             overflow: hidden;
         }
@@ -235,7 +235,7 @@
             right: 0;
             margin: 0;
             position: absolute;
-            top: 12%; /* Ustawienie kontenera na górze */
+            top: 12%;
 }
             .container2 {
             height: 50%;
@@ -244,7 +244,7 @@
             right: 0;
             margin-top: 5%;
             position: absolute;
-            top: 40%; /* Ustawienie kontenera 2 pod kontenerem */
+            top: 40%;
             overflow-y: auto;
 }
             #customButton1, #customButton2,#customButton3, #customButton4,#customButton5, #customButton6, #customButton7,
@@ -294,7 +294,6 @@
                 
             </div>
             <button id="middleButton">Click me</button>
-            <!-- Sekcja z tekstem i przyciskiem "Read more" -->
             <div class="readMoreContainer">
                 <p>More information:</p>
                 <a href="https://speedypl.github.io/HorrorGame/update_log.html" class="readMoreButton">Read more</a>
@@ -302,139 +301,104 @@
         </div>
     </div>
     <script>
-        // Początkowy tekst w nagłówku kontenera 2
         document.getElementById("container2Header").innerText = "Horror_game v.0.0.9";
         document.getElementById("middleButton").innerText = "0.0.9";
         document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! This is holidays time and honestly I haven't added many things heh, read Update Log if you want to check some thing";
-        // Ukrywanie zawartości dla przycisku "0.0.2"
         document.getElementById("container2Content").style.display = "none";
         document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://link-hub.net/1180106/horror-game-v009";
             };
 
-    
-        // Obsługa kliknięcia przycisku "0.0.1"
-        document.getElementById("customButton1").addEventListener("click", function() {
+            document.getElementById("customButton1").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.1";
-            document.getElementById("middleButton").innerText = "0.0.1"; // Ustawienie tekstu prz
-            // Ustawienie tekstu przycisku "Click me"
-            // Przekierowanie użytkownika na stronę
+            document.getElementById("middleButton").innerText = "0.0.1";
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/rw2jkio6toi8aif/Horror_game_0.0.1.apk/file";
             };
-            // Zmiana tekstu w sekcji "Read more" na "This is first build of this game"
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>This is first build of this game</strong>";
         });
     
-        // Obsługa kliknięcia przycisku "0.0.2"
         document.getElementById("customButton2").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.2";
-            document.getElementById("middleButton").innerText = "0.0.2"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.2";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Added:</strong><br>- Settings button<br>- Settings menu<br>- Sensitivity customization<br>- Build version in game (top right corner)<br>- Option to turn on/off Build version in game";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/t5840gfpw0cm7z2/Horror_game_0.0.2.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.2.1"
         document.getElementById("customButton3").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.2.1";
-            document.getElementById("middleButton").innerText = "0.0.2.1"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.2.1";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Version 0.0.2 was veeeeery buggy. I decided to fix those bugs and I also edited map (just a bit). You can read more by clicking button below";;
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/u5r4ebh7t2kgc8z/Horror_game_0.0.2.1.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.3"
         document.getElementById("customButton4").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.3";
-            document.getElementById("middleButton").innerText = "0.0.3"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.3";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hi, since latest bug fixing build I did some improvements and added few things. You can read more here:";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/n6vme84brtx8ywt/Horror_game_0.0.3.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.4"
         document.getElementById("customButton5").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.4";
-            document.getElementById("middleButton").innerText = "0.0.4"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.4";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read more here:";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/cim8rjsiia9p8uc/Horror_game_0.0.4.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.5"
         document.getElementById("customButton6").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.5";
-            document.getElementById("middleButton").innerText = "0.0.5"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.5";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more in Update Log";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/b3s3yi396uqtn8c/Horror_game_0.0.5.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.6"
         document.getElementById("customButton7").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.6";
-            document.getElementById("middleButton").innerText = "0.0.6"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.6";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! I was working really hard since last update. I added some interesting things! You can read more in Update Log";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://www.mediafire.com/file/3zzr2atkwv9uy9y/Horror_game_0.0.6.apk/file";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.7"
         document.getElementById("customButton8").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.7";
-            document.getElementById("middleButton").innerText = "0.0.7"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.7";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! It's been over a month since last update. I added some interesting things and you know where you can read about them haha";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://link-center.net/1180106/horror-game-007";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.8"
         document.getElementById("customButton9").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.8";
-            document.getElementById("middleButton").innerText = "0.0.8"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.8";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! Today I won't write many things here, just read Update Log hah";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://link-center.net/1180106/horror-game-008";
             };
         });
 
-        // Obsługa kliknięcia przycisku "0.0.9"
         document.getElementById("customButton10").addEventListener("click", function() {
             document.getElementById("container2Header").innerText = "Horror_game v.0.0.9";
-            document.getElementById("middleButton").innerText = "0.0.9"; // Ustawienie tekstu przycisku "Click me"
-            // Zmiana tekstu w sekcji "Read more" na "First update"
+            document.getElementById("middleButton").innerText = "0.0.9";
             document.querySelector(".readMoreContainer p").innerHTML = "<strong>Hello! This is holidays time and honestly I haven't added many things heh, read Update Log if you want to check some thing";
-            // Przekierowanie użytkownika na stronę Yandere Simulator
             document.getElementById("middleButton").onclick = function() {
                 window.location.href = "https://link-hub.net/1180106/horror-game-v009";
             };
         });
     
-        // Obsługa przycisku "Read more"
         document.querySelector(".readMoreButton").addEventListener("click", function() {
             window.location.href = "https://speedypl.github.io/HorrorGame/update_log.html";
         });
