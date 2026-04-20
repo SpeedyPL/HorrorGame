@@ -13,8 +13,8 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #000000, #660000);
-            height: 100vh; /* Ustawiamy wysokość na 100% wysokości ekranu */
-            resize: none; /* Blokowanie zmiany rozmiaru okna przeglądarki */
+            height: 100vh;
+            resize: none;
         }
         
         header {
@@ -27,7 +27,7 @@
             left: 0;
             right: 0;
             z-index: 999;
-            background-color: rgba(51, 51, 51, 0.484); /* Dodajemy przezroczystość do koloru tła */
+            background-color: rgba(51, 51, 51, 0.484);
             padding: 0px;
             font-family: 'Creepster', cursive;
         }
@@ -48,25 +48,25 @@
         }
         
         .container {
-            height: 75vh; /* Ustawiamy wysokość na 70% wysokości ekranu */
-            width: 30%; /* Ustawiamy szerokość na 40% szerokości ekranu */
+            height: 75vh;
+            width: 30%;
             position: absolute;
             bottom: 10px;
             left: 0.3%;
             overflow-y: auto;
             padding: 20px;
-            background-color: #f0f0f0; /* Dodajemy kolor tła dla kontenera */
+            background-color: #f0f0f0;
         }
         
         .container2 {
-            height: 75vh; /* Ustawiamy wysokość na 70% wysokości ekranu */
-            width: 60%; /* Ustawiamy szerokość na 40% szerokości ekranu */
+            height: 75vh;
+            width: 60%;
             position: absolute;
             bottom: 10px;
             right: 1%;
             overflow-y: auto;
             padding: 20px;
-            background-color: #f0f0f0; /* Dodajemy kolor tła dla kontenera */
+            background-color: #f0f0f0;
         }
         
         .content {
@@ -85,17 +85,17 @@
         #customButton2,
         #customButton1 {
             display: block;
-            margin-bottom: 10px; /* Odstęp między przyciskami */
-            width: 100%; /* Pełna szerokość przycisku */
+            margin-bottom: 10px;
+            width: 100%;
         }
         
         #container2Header {
-            text-align: center; /* Wyśrodkowanie tekstu w nagłówku */
+            text-align: center;
         }
         
         #container2Content {
-            text-align: left; /* Ustawienie tekstu w treści na lewo */
-            overflow-y: auto; /* Włączenie pionowego przewijania */
+            text-align: left;
+            overflow-y: auto;
         }
         
         .text-left{
@@ -104,7 +104,7 @@
         
         @media screen and (max-height: 600px) {
             header {
-                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 1rem;
             }
 
             header button{
@@ -131,7 +131,7 @@
 
         @media screen and (max-width: 935px) {
             header {
-                font-size: 1.5rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 1.5rem;
             }
 
             header button{
@@ -156,7 +156,7 @@
 
         @media screen and (max-width: 768px) {
             header {
-                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 1rem;
             }
 
             .container{
@@ -175,7 +175,7 @@
         }
         @media screen and (max-width: 540px) {
             header {
-                font-size: 1rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 1rem;
             }
 
             .container{
@@ -194,7 +194,7 @@
         }
         @media screen and (max-width: 445px) {
             header {
-                font-size: 0.8rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 0.8rem;
             }
 
             .container{
@@ -213,7 +213,7 @@
         }
         @media screen and (max-width: 280px) {            
             header {
-                font-size: 0.6rem; /* Nowy rozmiar czcionki dla urządzeń mobilnych */
+                font-size: 0.6rem;
             }
 
             .container {
@@ -223,7 +223,7 @@
             right: 0;
             margin: 0;
             position: absolute;
-            top: 12%; /* Ustawienie kontenera na górze */
+            top: 12%;
 }
 
             .container2 {
@@ -233,7 +233,7 @@
             right: 0;
             margin-top: 5%;
             position: absolute;
-            top: 40%; /* Ustawienie kontenera 2 pod kontenerem */
+            top: 40%;
             overflow-y: auto;
 }
 
@@ -248,7 +248,6 @@
 <body>
     <header>
         <h1>UPDATE LOG</h1>
-        <!-- Przycisk do przekierowania na inną stronę -->
         <button onclick="window.location.href='https://speedypl.github.io/HorrorGame/'">Go back</button>
     </header>
     <div class="container">
@@ -296,7 +295,6 @@
     
     <script>
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.9
         document.getElementById("customButton10").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -320,12 +318,10 @@
                 <p></p>
                 <h2>If you want to report a bug or give me ideas for the next updates, go to "COMMENT" option!</h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "05.08.2024 v.0.0.9";
             document.getElementById("container2Subheader").innerText = "Hello! How it's going hehe? I haven't added many things in this update. It's holidays time so I was spending so much time with my family and my frinds. Soooo let's see what's new in this update! ";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.8
         document.getElementById("customButton9").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -343,12 +339,10 @@
                 <p>- deleted CREDITS and LANGUAGE panel (They will be added back in v.1.0.0)</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "08.07.2024 v.0.0.8";
             document.getElementById("container2Subheader").innerText = "Hello! Lately I was working on adding some use to the key in the safe, you can read more about it below: ";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.7
         document.getElementById("customButton8").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -371,12 +365,10 @@
                 <p>- OPEN/CLOSE SETTINGS: ESC</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "14.06.2024 v.0.0.7";
             document.getElementById("container2Subheader").innerText = "Hello! It's been over a month since last update. I added some interesting things and you can read about them below: ";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.6
         document.getElementById("customButton7").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -398,12 +390,10 @@
                 <p>- On SAMSUNG GALAXY Z FOLD2 5G Language menu and Main menu was scaling veeeeeery bad. I fixed it!</p>
                 <h2>If you want to report a bug go to "COMMENT" option!</h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "05.05.2024 v.0.0.6";
             document.getElementById("container2Subheader").innerText = "Hello! I was working really hard since last update. I added some interesting things! You can read more about it below:";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.5
         document.getElementById("customButton6").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -419,11 +409,9 @@
                     Oh I almost forgot, at the moment Credits are only displayed in 2 languages (English and Polish)
                 </h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "28.04.2024 v.0.0.5";
             document.getElementById("container2Subheader").innerText = "Hello! Lately I've been working on adding 'Game Language' option and I think it's ready! You can read more about it below:";
         });
-        // Funkcja obsługująca kliknięcie przycisku 0.0.4
             document.getElementById("customButton5").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -450,12 +438,10 @@
                 <p>- since version 0.0.1, player was able to jump on the wall and stay in the middle of a wall. I fixed this bug</p>
                 <h2>Everyday I'm getting better at C# and Blender, so I'll try to make updates more often! Thanks for playing my game :D</h2>
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "20.04.2024 v.0.0.4";
             document.getElementById("container2Subheader").innerText = "Hello everyone! It's been almost a month since last update. I was working really hard on this update and added some interesting mechanics. You can read about it below:";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.3
             document.getElementById("customButton4").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <h2>Added:</h2>
@@ -469,12 +455,10 @@
                 <p>- I got reports that Sensitivity is really bad, I decided to change make camera 2 times more sensitive. I hope it will be good</p>
                 <h1>I will try to work on comment section,better website scaling for mobile devices and maybe a discord server soon!</h1> 
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "22.03.2024 v.0.0.3";
             document.getElementById("container2Subheader").innerText = "Hi, since latest bug fixing build I did some improvements and added few things. I also added a logo to my website :D .You can read more about it below:";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 0.0.2.1
         document.getElementById("customButton3").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
             <p>- Buttons on some mobile devices were scaling really bad. I fixed it</p>
@@ -492,12 +476,10 @@
                 <h2>Flying on hammer:</h2>
                 <img id="hammerImage" src="https://github.com/SpeedyPL/Images_Testing/blob/main/hammer_fly_bug.png?raw=true" alt="Flying on hammer" style="width: 70%; height: 40%;" onclick="toggleImageSize()">
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "20.03.2024 v.0.0.2.1 (Bug fixing build)";
             document.getElementById("container2Subheader").innerText = "Hello. Yesterday's build was veeeeery buggy, so I decided to make this Bug Fixing build. Besides fixing bugs I also added and improved some things. You can read about it below:";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 1
         document.getElementById("customButton2").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = `
                 <p>- Settings button</p>
@@ -511,15 +493,12 @@
                 <p>- Pick up and drop option (will be updated in the next update)</p>
 
             `;
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "19.03.2024 v.0.0.2";
             document.getElementById("container2Subheader").innerText = "Added:";
         });
 
-        // Funkcja obsługująca kliknięcie przycisku 2
         document.getElementById("customButton1").addEventListener("click", function() {
             document.getElementById("container2Content").innerHTML = "<p></p>";
-            // Aktualizacja nagłówków
             document.getElementById("container2Header").innerText = "That's where it all started :)";
             document.getElementById("container2Subheader").innerText = "";
         });
